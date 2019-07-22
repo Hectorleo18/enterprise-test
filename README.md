@@ -48,6 +48,8 @@ https://enterprise-test-server.herokuapp.com/historical/USD/JPY?start=5-15-2018&
 -El api usado para obtener las tasas de cambio es [Foreign exchange rates API
 with currency conversion](http://exchangeratesapi.io/).
 
+-Se puede obtener cualquier tasa de cambio desde 1999.
+
 
 ## Documentación
 
