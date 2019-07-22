@@ -1,6 +1,6 @@
 # enterprise-test-api
 
-Una API desarrollada con express.js [Express 4](http://expressjs.com/).
+Una API desarrollada con [Express 4](http://expressjs.com/).
 
 
 ## correr localmente
@@ -17,7 +17,39 @@ Recibe un "simbolo" de moneda y retorna su valor con respecto a las demás
 https://enterprise-test-server.herokuapp.com/latest/USD
 ´´
 
-## Documentation
+### /latest/{BASE}/{VERSUS}
+
+Recibe dos "simbolos" de moneda y retorna la tasa de cambio entre ellas
+
+´´
+https://enterprise-test-server.herokuapp.com/latest/USD/JPY
+´´
+
+### /historical/{BASE}/{VERSUS}?date={mm-dd-yyyy}
+
+Recibe dos "simbolos" de moneda más una fecha y retorna la tasa de cambio de las monedas en la fecha establecida
+
+´´
+https://enterprise-test-server.herokuapp.com/historical/USD/JPY?date=5-15-2018
+´´
+
+### /historical/{BASE}/{VERSUS}?start={mm-dd-yyyy}&end={mm-dd-yyyy}
+
+Recibe dos "simbolos" de moneda más dos fechas y retorna todas los valores de la tasa de cambio que hubieron entre las dos fechas
+
+´´
+https://enterprise-test-server.herokuapp.com/historical/USD/JPY?start=5-15-2018&end=5-29-2018
+´´
+
+## Notas
+
+-Las monedas válidas son: USD, EUR, GBP, CAD, JPY, AUD.
+
+-El api usado para obtener las tasas de cambio es [Foreign exchange rates API
+with currency conversion](http://exchangeratesapi.io/).
+
+
+## Documentación
 
 Para más información acerca del uso de node.js en Heroku, puedes leer estos artículos:
 
